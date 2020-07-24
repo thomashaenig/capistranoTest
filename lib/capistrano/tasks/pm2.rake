@@ -27,9 +27,9 @@ namespace :pm2 do
   end
 
   def start_app_full
-    within current_path do
+    # within current_path do
       execute "npm run start"
-    end
+    # end
   end
   
   desc 'Restart app gracefully'
