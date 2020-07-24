@@ -25,27 +25,32 @@ namespace :pm2 do
       execute :pm2, :stop, fetch(:app_command)
     end
   end
+
+  def start_app_full
+    within current_path do
+      execute "npm run start"
+    end
+  end
   
   desc 'Restart app gracefully'
   task :restart do
-    info '####'
-    on roles(:app) do
-      info '####'
-      case app_status
-      when nil
-        info 'App is not registerd'
-        start_app
-      when 'stopped'
-        info 'App is stopped'
-        restart_app
-      when 'errored'
-        info 'App has errored'
-        restart_app
-      when 'online'
-        info 'App is online'
-        restart_app
-      end
-    end
+    start_app_full
+    # on roles(:app) do
+    #   case app_status
+    #   when nil
+    #     info 'App is not registerd'
+    #     start_app
+    #   when 'stopped'
+    #     info 'App is stopped'
+    #     restart_app
+    #   when 'errored'
+    #     info 'App has errored'
+    #     restart_app
+    #   when 'online'
+    #     info 'App is online'
+    #     restart_app
+    #   end
+    # end
   end
   
 end
