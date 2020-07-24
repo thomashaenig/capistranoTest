@@ -46,7 +46,8 @@ namespace :deploy do
 
     desc 'Restart application'
     task :restart do
-        invoke 'pm2:restart'
+        print '### restart ###'
+        invoke 'akquinet:deploy:setup'
     end
 
     after :publishing, :restart
