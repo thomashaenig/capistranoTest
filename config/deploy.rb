@@ -39,3 +39,13 @@ set :deploy_to, "/home/deploy/capistranoTest"
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 # set :ssh_options, { :forward_agent => true }
+
+namespace :deploy do
+
+    desc 'Restart application'
+    task :restart do
+        invoke 'pm2:restart'
+    end
+  
+    after :publishing, :restart   
+end
