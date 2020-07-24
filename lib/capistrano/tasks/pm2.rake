@@ -28,6 +28,7 @@ namespace :pm2 do
   
   desc 'Restart app gracefully'
   task :restart do
+    info '####'
     on roles(:app) do
       info '####'
       case app_status
