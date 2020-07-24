@@ -29,6 +29,7 @@ namespace :pm2 do
   desc 'Restart app gracefully'
   task :restart do
     on roles(:app) do
+      info '####'
       case app_status
       when nil
         info 'App is not registerd'

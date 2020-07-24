@@ -2,3 +2,186 @@
   INFO ---------------------------------------------------------------------------
   INFO START 2020-07-24 12:58:07 +0200 cap production deploy
   INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-07-24 13:01:34 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-07-24 13:02:04 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-07-24 13:03:34 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-07-24 13:05:05 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-07-24 13:06:06 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-07-24 13:12:33 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-07-24 13:13:37 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-07-24 13:14:02 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-07-24 13:14:07 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-07-24 13:14:33 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [bcc69529] Running /usr/bin/env mkdir -p /tmp as deploy@172.30.1.128
+ DEBUG [bcc69529] Command: /usr/bin/env mkdir -p /tmp
+  INFO [bcc69529] Finished in 8.763 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistranoTest-staging-thaenig.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistranoTest-staging-thaenig.sh 100.0%
+  INFO [6f565284] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistranoTest-staging-thaenig.sh as deploy@172.30.1.128
+ DEBUG [6f565284] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistranoTest-staging-thaenig.sh
+  INFO [6f565284] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [40b572a8] Running /usr/bin/env git ls-remote git@github.com:thomashaenig/capistranoTest.git HEAD as deploy@172.30.1.128
+ DEBUG [40b572a8] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistranoTest-staging-thaenig.sh" ; /usr/bin/env git ls-remote git@github.com:thomashaenig/capistranoTest.git HEAD )
+ DEBUG [40b572a8] 	f535c9cf627a09261619b39269b050412083f782	HEAD
+  INFO [40b572a8] Finished in 1.301 seconds with exit status 0 (successful).
+  INFO [5bc1bee6] Running /usr/bin/env mkdir -p /home/deploy/capistranoTest/shared /home/deploy/capistranoTest/releases as deploy@172.30.1.128
+ DEBUG [5bc1bee6] Command: /usr/bin/env mkdir -p /home/deploy/capistranoTest/shared /home/deploy/capistranoTest/releases
+  INFO [5bc1bee6] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [0ef80956] Running [ -f /home/deploy/capistranoTest/current/REVISION ] as deploy@172.30.1.128
+ DEBUG [0ef80956] Command: [ -f /home/deploy/capistranoTest/current/REVISION ]
+ DEBUG [0ef80956] Finished in 0.056 seconds with exit status 1 (failed).
+ DEBUG [f1405358] Running [ -f /home/deploy/capistranoTest/repo/HEAD ] as deploy@172.30.1.128
+ DEBUG [f1405358] Command: [ -f /home/deploy/capistranoTest/repo/HEAD ]
+ DEBUG [f1405358] Finished in 0.056 seconds with exit status 1 (failed).
+ DEBUG [e8bfac49] Running if test ! -d /home/deploy/capistranoTest; then echo "Directory does not exist '/home/deploy/capistranoTest'" 1>&2; false; fi as deploy@172.30.1.128
+ DEBUG [e8bfac49] Command: if test ! -d /home/deploy/capistranoTest; then echo "Directory does not exist '/home/deploy/capistranoTest'" 1>&2; false; fi
+ DEBUG [e8bfac49] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [48634059] Running /usr/bin/env git clone --mirror git@github.com:thomashaenig/capistranoTest.git /home/deploy/capistranoTest/repo as deploy@172.30.1.128
+ DEBUG [48634059] Command: cd /home/deploy/capistranoTest && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistranoTest-staging-thaenig.sh" ; /usr/bin/env git clone --mirror git@github.com:thomashaenig/capistranoTest.git /home/deploy/capistranoTest/repo )
+ DEBUG [48634059] 	Cloning into bare repository '/home/deploy/capistranoTest/repo'...
+  INFO [48634059] Finished in 1.302 seconds with exit status 0 (successful).
+ DEBUG [7f53a408] Running if test ! -d /home/deploy/capistranoTest/repo; then echo "Directory does not exist '/home/deploy/capistranoTest/repo'" 1>&2; false; fi as deploy@172.30.1.128
+ DEBUG [7f53a408] Command: if test ! -d /home/deploy/capistranoTest/repo; then echo "Directory does not exist '/home/deploy/capistranoTest/repo'" 1>&2; false; fi
+ DEBUG [7f53a408] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [d5fe7beb] Running /usr/bin/env git remote set-url origin git@github.com:thomashaenig/capistranoTest.git as deploy@172.30.1.128
+ DEBUG [d5fe7beb] Command: cd /home/deploy/capistranoTest/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistranoTest-staging-thaenig.sh" ; /usr/bin/env git remote set-url origin git@github.com:thomashaenig/capistranoTest.git )
+  INFO [d5fe7beb] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [62f39f79] Running /usr/bin/env git remote update --prune as deploy@172.30.1.128
+ DEBUG [62f39f79] Command: cd /home/deploy/capistranoTest/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistranoTest-staging-thaenig.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [62f39f79] 	Fetching origin
+  INFO [62f39f79] Finished in 1.548 seconds with exit status 0 (successful).
+ DEBUG [d0345afa] Running if test ! -d /home/deploy/capistranoTest/repo; then echo "Directory does not exist '/home/deploy/capistranoTest/repo'" 1>&2; false; fi as deploy@172.30.1.128
+ DEBUG [d0345afa] Command: if test ! -d /home/deploy/capistranoTest/repo; then echo "Directory does not exist '/home/deploy/capistranoTest/repo'" 1>&2; false; fi
+ DEBUG [d0345afa] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [484ab0a0] Running /usr/bin/env mkdir -p /home/deploy/capistranoTest/releases/20200724111443 as deploy@172.30.1.128
+ DEBUG [484ab0a0] Command: cd /home/deploy/capistranoTest/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistranoTest-staging-thaenig.sh" ; /usr/bin/env mkdir -p /home/deploy/capistranoTest/releases/20200724111443 )
+  INFO [484ab0a0] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [060d30de] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/capistranoTest/releases/20200724111443 as deploy@172.30.1.128
+ DEBUG [060d30de] Command: cd /home/deploy/capistranoTest/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistranoTest-staging-thaenig.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/capistranoTest/releases/20200724111443 )
+  INFO [060d30de] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [1c916a21] Running if test ! -d /home/deploy/capistranoTest/repo; then echo "Directory does not exist '/home/deploy/capistranoTest/repo'" 1>&2; false; fi as deploy@172.30.1.128
+ DEBUG [1c916a21] Command: if test ! -d /home/deploy/capistranoTest/repo; then echo "Directory does not exist '/home/deploy/capistranoTest/repo'" 1>&2; false; fi
+ DEBUG [1c916a21] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [ca2d4138] Running /usr/bin/env git rev-list --max-count=1 master as deploy@172.30.1.128
+ DEBUG [ca2d4138] Command: cd /home/deploy/capistranoTest/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistranoTest-staging-thaenig.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [ca2d4138] 	f535c9cf627a09261619b39269b050412083f782
+ DEBUG [ca2d4138] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [6dbddc1e] Running if test ! -d /home/deploy/capistranoTest/releases/20200724111443; then echo "Directory does not exist '/home/deploy/capistranoTest/releases/20200724111443'" 1>&2; false; fi as deploy@172.30.1.128
+ DEBUG [6dbddc1e] Command: if test ! -d /home/deploy/capistranoTest/releases/20200724111443; then echo "Directory does not exist '/home/deploy/capistranoTest/releases/20200724111443'" 1>&2; false; fi
+ DEBUG [6dbddc1e] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [6cc17ab4] Running /usr/bin/env echo "f535c9cf627a09261619b39269b050412083f782" > REVISION as deploy@172.30.1.128
+ DEBUG [6cc17ab4] Command: cd /home/deploy/capistranoTest/releases/20200724111443 && /usr/bin/env echo "f535c9cf627a09261619b39269b050412083f782" > REVISION
+  INFO [6cc17ab4] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [82e74f10] Running /usr/bin/env ln -s /home/deploy/capistranoTest/releases/20200724111443 /home/deploy/capistranoTest/releases/current as deploy@172.30.1.128
+ DEBUG [82e74f10] Command: /usr/bin/env ln -s /home/deploy/capistranoTest/releases/20200724111443 /home/deploy/capistranoTest/releases/current
+  INFO [82e74f10] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [8ee036db] Running /usr/bin/env mv /home/deploy/capistranoTest/releases/current /home/deploy/capistranoTest as deploy@172.30.1.128
+ DEBUG [8ee036db] Command: /usr/bin/env mv /home/deploy/capistranoTest/releases/current /home/deploy/capistranoTest
+  INFO [8ee036db] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [b4ff9f06] Running /usr/bin/env ls -x /home/deploy/capistranoTest/releases as deploy@172.30.1.128
+ DEBUG [b4ff9f06] Command: /usr/bin/env ls -x /home/deploy/capistranoTest/releases
+ DEBUG [b4ff9f06] 	20200724111443
+ DEBUG [b4ff9f06] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [a2e18a3e] Running if test ! -d /home/deploy/capistranoTest/releases; then echo "Directory does not exist '/home/deploy/capistranoTest/releases'" 1>&2; false; fi as deploy@172.30.1.128
+ DEBUG [a2e18a3e] Command: if test ! -d /home/deploy/capistranoTest/releases; then echo "Directory does not exist '/home/deploy/capistranoTest/releases'" 1>&2; false; fi
+ DEBUG [a2e18a3e] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [567205b9] Running /usr/bin/env echo "Branch master (at f535c9cf627a09261619b39269b050412083f782) deployed as release 20200724111443 by thaenig" >> /home/deploy/capistranoTest/revisions.log as deploy@172.30.1.128
+ DEBUG [567205b9] Command: cd /home/deploy/capistranoTest/releases && /usr/bin/env echo "Branch master (at f535c9cf627a09261619b39269b050412083f782) deployed as release 20200724111443 by thaenig" >> /home/deploy/capistranoTest/revisions.log
+  INFO [567205b9] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-07-24 14:04:59 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [503ff478] Running /usr/bin/env mkdir -p /tmp as deploy@172.30.1.128
+ DEBUG [503ff478] Command: /usr/bin/env mkdir -p /tmp
+  INFO [503ff478] Finished in 6.841 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistranoTest-staging-thaenig.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistranoTest-staging-thaenig.sh 100.0%
+  INFO [04181f66] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistranoTest-staging-thaenig.sh as deploy@172.30.1.128
+ DEBUG [04181f66] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistranoTest-staging-thaenig.sh
+  INFO [04181f66] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [c59ef556] Running /usr/bin/env git ls-remote git@github.com:thomashaenig/capistranoTest.git HEAD as deploy@172.30.1.128
+ DEBUG [c59ef556] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistranoTest-staging-thaenig.sh" ; /usr/bin/env git ls-remote git@github.com:thomashaenig/capistranoTest.git HEAD )
+ DEBUG [c59ef556] 	f535c9cf627a09261619b39269b050412083f782	HEAD
+  INFO [c59ef556] Finished in 1.319 seconds with exit status 0 (successful).
+  INFO [75bae4c8] Running /usr/bin/env mkdir -p /home/deploy/capistranoTest/shared /home/deploy/capistranoTest/releases as deploy@172.30.1.128
+ DEBUG [75bae4c8] Command: /usr/bin/env mkdir -p /home/deploy/capistranoTest/shared /home/deploy/capistranoTest/releases
+  INFO [75bae4c8] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [9e33d8b1] Running [ -f /home/deploy/capistranoTest/current/REVISION ] as deploy@172.30.1.128
+ DEBUG [9e33d8b1] Command: [ -f /home/deploy/capistranoTest/current/REVISION ]
+ DEBUG [9e33d8b1] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [44924182] Running /usr/bin/env cat /home/deploy/capistranoTest/current/REVISION 2>/dev/null as deploy@172.30.1.128
+ DEBUG [44924182] Command: /usr/bin/env cat /home/deploy/capistranoTest/current/REVISION 2>/dev/null
+ DEBUG [44924182] 	f535c9cf627a09261619b39269b050412083f782
+ DEBUG [44924182] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [fdcebd36] Running [ -f /home/deploy/capistranoTest/repo/HEAD ] as deploy@172.30.1.128
+ DEBUG [fdcebd36] Command: [ -f /home/deploy/capistranoTest/repo/HEAD ]
+ DEBUG [fdcebd36] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/capistranoTest/repo
+ DEBUG [9fc47a26] Running if test ! -d /home/deploy/capistranoTest/repo; then echo "Directory does not exist '/home/deploy/capistranoTest/repo'" 1>&2; false; fi as deploy@172.30.1.128
+ DEBUG [9fc47a26] Command: if test ! -d /home/deploy/capistranoTest/repo; then echo "Directory does not exist '/home/deploy/capistranoTest/repo'" 1>&2; false; fi
+ DEBUG [9fc47a26] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [3e5f6ea5] Running /usr/bin/env git remote set-url origin git@github.com:thomashaenig/capistranoTest.git as deploy@172.30.1.128
+ DEBUG [3e5f6ea5] Command: cd /home/deploy/capistranoTest/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistranoTest-staging-thaenig.sh" ; /usr/bin/env git remote set-url origin git@github.com:thomashaenig/capistranoTest.git )
+  INFO [3e5f6ea5] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [3dce054f] Running /usr/bin/env git remote update --prune as deploy@172.30.1.128
+ DEBUG [3dce054f] Command: cd /home/deploy/capistranoTest/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistranoTest-staging-thaenig.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [3dce054f] 	Fetching origin
+  INFO [3dce054f] Finished in 1.289 seconds with exit status 0 (successful).
+ DEBUG [32cbb21f] Running if test ! -d /home/deploy/capistranoTest/repo; then echo "Directory does not exist '/home/deploy/capistranoTest/repo'" 1>&2; false; fi as deploy@172.30.1.128
+ DEBUG [32cbb21f] Command: if test ! -d /home/deploy/capistranoTest/repo; then echo "Directory does not exist '/home/deploy/capistranoTest/repo'" 1>&2; false; fi
+ DEBUG [32cbb21f] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [3ad8aa73] Running /usr/bin/env mkdir -p /home/deploy/capistranoTest/releases/20200724120508 as deploy@172.30.1.128
+ DEBUG [3ad8aa73] Command: cd /home/deploy/capistranoTest/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistranoTest-staging-thaenig.sh" ; /usr/bin/env mkdir -p /home/deploy/capistranoTest/releases/20200724120508 )
+  INFO [3ad8aa73] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [ba44e4d5] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/capistranoTest/releases/20200724120508 as deploy@172.30.1.128
+ DEBUG [ba44e4d5] Command: cd /home/deploy/capistranoTest/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistranoTest-staging-thaenig.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/capistranoTest/releases/20200724120508 )
+  INFO [ba44e4d5] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [b9044788] Running if test ! -d /home/deploy/capistranoTest/repo; then echo "Directory does not exist '/home/deploy/capistranoTest/repo'" 1>&2; false; fi as deploy@172.30.1.128
+ DEBUG [b9044788] Command: if test ! -d /home/deploy/capistranoTest/repo; then echo "Directory does not exist '/home/deploy/capistranoTest/repo'" 1>&2; false; fi
+ DEBUG [b9044788] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [8f113379] Running /usr/bin/env git rev-list --max-count=1 master as deploy@172.30.1.128
+ DEBUG [8f113379] Command: cd /home/deploy/capistranoTest/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistranoTest-staging-thaenig.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [8f113379] 	f535c9cf627a09261619b39269b050412083f782
+ DEBUG [8f113379] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [8371b581] Running if test ! -d /home/deploy/capistranoTest/releases/20200724120508; then echo "Directory does not exist '/home/deploy/capistranoTest/releases/20200724120508'" 1>&2; false; fi as deploy@172.30.1.128
+ DEBUG [8371b581] Command: if test ! -d /home/deploy/capistranoTest/releases/20200724120508; then echo "Directory does not exist '/home/deploy/capistranoTest/releases/20200724120508'" 1>&2; false; fi
+ DEBUG [8371b581] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [ff73244b] Running /usr/bin/env echo "f535c9cf627a09261619b39269b050412083f782" > REVISION as deploy@172.30.1.128
+ DEBUG [ff73244b] Command: cd /home/deploy/capistranoTest/releases/20200724120508 && /usr/bin/env echo "f535c9cf627a09261619b39269b050412083f782" > REVISION
+  INFO [ff73244b] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [08666526] Running /usr/bin/env ln -s /home/deploy/capistranoTest/releases/20200724120508 /home/deploy/capistranoTest/releases/current as deploy@172.30.1.128
+ DEBUG [08666526] Command: /usr/bin/env ln -s /home/deploy/capistranoTest/releases/20200724120508 /home/deploy/capistranoTest/releases/current
+  INFO [08666526] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [b6e75b21] Running /usr/bin/env mv /home/deploy/capistranoTest/releases/current /home/deploy/capistranoTest as deploy@172.30.1.128
+ DEBUG [b6e75b21] Command: /usr/bin/env mv /home/deploy/capistranoTest/releases/current /home/deploy/capistranoTest
+  INFO [b6e75b21] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [5f8461f3] Running /usr/bin/env ls -x /home/deploy/capistranoTest/releases as deploy@172.30.1.128
+ DEBUG [5f8461f3] Command: /usr/bin/env ls -x /home/deploy/capistranoTest/releases
+ DEBUG [5f8461f3] 	20200724111443	20200724120508
+ DEBUG [5f8461f3] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [3af620c3] Running if test ! -d /home/deploy/capistranoTest/releases; then echo "Directory does not exist '/home/deploy/capistranoTest/releases'" 1>&2; false; fi as deploy@172.30.1.128
+ DEBUG [3af620c3] Command: if test ! -d /home/deploy/capistranoTest/releases; then echo "Directory does not exist '/home/deploy/capistranoTest/releases'" 1>&2; false; fi
+ DEBUG [3af620c3] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [74ae56da] Running /usr/bin/env echo "Branch master (at f535c9cf627a09261619b39269b050412083f782) deployed as release 20200724120508 by thaenig" >> /home/deploy/capistranoTest/revisions.log as deploy@172.30.1.128
+ DEBUG [74ae56da] Command: cd /home/deploy/capistranoTest/releases && /usr/bin/env echo "Branch master (at f535c9cf627a09261619b39269b050412083f782) deployed as release 20200724120508 by thaenig" >> /home/deploy/capistranoTest/revisions.log
+  INFO [74ae56da] Finished in 0.055 seconds with exit status 0 (successful).

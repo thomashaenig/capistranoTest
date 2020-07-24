@@ -42,10 +42,17 @@ set :deploy_to, "/home/deploy/capistranoTest"
 
 namespace :deploy do
 
+    print "start"
+    print
+
     desc 'Restart application'
     task :restart do
         invoke 'pm2:restart'
     end
   
-    after :publishing, :restart   
+    print "bevor pub"
+    print
+
+    after :publishing, :restart
+    print "end"
 end
