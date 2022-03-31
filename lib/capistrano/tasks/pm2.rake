@@ -1,7 +1,9 @@
 namespace :akquinet do
   namespace :deploy do
     task :setup do
-      on roles(:app) do
+      on roles(:app) do |host|
+        info 'RUNNING'
+        info host
         execute "cd  capistranoTest/current && npm run start"
       end
     end
